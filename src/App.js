@@ -1,5 +1,5 @@
 import './App.css';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import BookList from './components/book/BookList';
 import BookDetail from './components/book/BookDetail.js';
 
@@ -8,8 +8,11 @@ function App() {
   return (
     <main className="container">
       <h1>Library Catalog</h1>
-      <Route path="/books/:id" component={BookDetail} />
-      <Route path="/books" component={BookList} />
+
+      <Switch>
+        <Route path="/books/:id" component={BookDetail} />
+        <Route path="/books" component={BookList} />
+      </Switch>
     </main>
   );
 }
