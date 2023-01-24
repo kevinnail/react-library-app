@@ -3,6 +3,8 @@ import { useBooks } from '../../hooks/useBooks';
 
 function BookList() {
   const { error, loading, books } = useBooks();
+  console.log('books', books);
+
   if (error)
     return (
       <>
