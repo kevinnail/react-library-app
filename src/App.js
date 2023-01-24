@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import BookList from './components/book/BookList';
 import BookDetail from './components/book/BookDetail.js';
 
@@ -8,6 +8,7 @@ function App() {
   return (
     <main className="container">
       <h1>Library Catalog</h1>
+      <Link to={`/books/`}>Books</Link>
 
       <Switch>
         <Route path="/books/:id" component={BookDetail} />
